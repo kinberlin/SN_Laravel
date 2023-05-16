@@ -22,32 +22,26 @@
                 <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <th scope="col">Numero</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Telephone</th>
-                            <th scope="col">Ville</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Intitulé</th>
                         </tr>
                     </thead>
 
                     <tfoot>
                         <tr>
-                        <th scope="col">Numero</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Telephone</th>
-                            <th scope="col">Ville</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Intitulé</th>
                         </tr>
                     </tfoot>
 
                     <tbody>
-                        @foreach($regions as $r)
+                        @foreach($motivations as $r)
                         <tr>
-                            <th scope="row">{{$r->num}}</th>
-                            <th scope="row">{{$r->nom}}</th>
-                            <th scope="row">{{$r->ville}}</th>
-                            <td>{{$r->tel}}</td>
+                            <th scope="row">{{$r->id}}</th>
+                            <th scope="row">{{$r->intitulé}}</th>
                             <td>
-                                <a class="btn btn-primary btn-xs" href="/region_edit/{{$r->num}}?id={{$r->num}}" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></a>
-                                <a class="btn btn-danger btn-xs" href="/region_delete/{{$r->num}}" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a class="btn btn-primary btn-xs" href="/motivation_edit/{{$r->id}}?id={{$r->id}}" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a class="btn btn-danger btn-xs" href="/motivation_delete/{{$r->id}}" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
 
                         </tr>
