@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Client;
-use App\Models\Contrat;
+use App\Models\Abonne;
+use App\Models\Motivation;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]); 
-        Client::factory(5) -> create();
-        //Contrat::factory(5) -> create();
+        Motivation::factory(40) -> create();
+        Abonne::factory(200) -> create();
+        
     }
 }
