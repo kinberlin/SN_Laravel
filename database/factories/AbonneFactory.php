@@ -25,10 +25,10 @@ class AbonneFactory extends Factory
             "profession" =>Str::upper(Str::random(10)),
             "code_postal" =>Str::upper(Str::random(10)),
             "prenom" =>$this->faker->name(),
-            "tel" =>$this->faker->phoneNumber(),//Str::upper(Str::random(10)),
+            "telephone" =>$this->faker->phoneNumber(),//Str::upper(Str::random(10)),
             "sexe" =>$this->faker->randomElement(['male', 'female']),
             "ville" =>$this->faker->city,
-            "pays" =>$this->faker->country,
+            "pays" =>Str::upper(Str::random(10)),
             "email" =>$this->faker->email(),//Str::upper(Str::random(10)),
             "nom" =>$this->faker->name() //Str::upper(Str::random(10))
 
